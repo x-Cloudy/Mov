@@ -1,0 +1,93 @@
+
+.display-container {
+  display: flex;
+  background-color: beige;
+  height: 56vw;
+  width: 100vw;
+}
+
+.iframe {
+
+  position: absolute;
+  width: 100vw;
+  z-index: 1;
+}
+
+.iframe-shadow {
+  transform: translate(0px, 5px);
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  height: 200px;
+  width: 100vw;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 19.79%, rgba(6, 6, 6, 0.42) 38.54%, rgba(20, 20, 20, 0.96) 89.58%);
+  z-index: 2;
+}
+
+.video-menu {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 0 0 300px 10px;
+  padding: 20px;
+  align-self: flex-end;
+  position: relative;
+  width: 35%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10;
+}
+
+.btn-play {
+  cursor: pointer;
+  width: 35%;
+  height: 45%;
+  margin-right: 10px;
+  align-items: center;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  padding: 0.4rem;
+  position: relative;
+  user-select: none;
+  background-color: white;
+  color: black;
+  font-family: Helvetica;
+  font-size: 180%;
+  font-weight: bolder;
+  word-break: break-word;
+  white-space: nowrap;
+}
+
+#btn-play-icon {
+  font-size: 230%;
+  margin-left: -10px;
+}
+
+.btn-info {
+  cursor: pointer;
+  width: 55%;
+  height: 45%;
+  align-items: center;
+  appearance: none;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0.8rem;
+  font-family: Helvetica;
+  font-size: 150%;
+  font-weight: bolder;
+  position: relative;
+  user-select: none;
+  color: white;
+  background-color: rgba(109, 109, 110, 0.7);;
+  word-break: break-word;
+  white-space: nowrap;
+}

@@ -1,0 +1,286 @@
+@media screen and (min-width:  100px) and (max-width: 700px) {
+  .navbar li {
+    scale: 1.4;
+    
+  }
+}
+@media screen and (min-width:  700px) and (max-width: 1000px) {
+  .navbar li {
+    scale: 1.2;
+    
+  }
+}
+@media screen and (min-width:  1700px) and (max-width: 2600px) {
+  .navbar li {
+    scale: 0.8;
+    margin-right: -10px;
+  }
+}
+
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 68px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
+  ;
+  font-size: 1.3rem;
+  padding: 0px 40px;
+  z-index: 100;
+}
+
+.header-container-close {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 41px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
+  ;
+  font-size: 1.3rem;
+  padding: 0px 40px;
+  z-index: 100;
+}
+
+
+
+.navbar {
+  position: relative;
+  display: flex;
+  list-style: none;
+  margin-left: 60px;
+  z-index: 100;
+}
+
+.navbar li a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: sans-serif;
+  user-select: none;
+  z-index: 100;
+}
+
+#navClose-icon {
+  font-size: 3.4rem;
+}
+
+.dropAct {
+  z-index: 10;
+  width: 100px;
+  height: 60px;
+}
+
+.nav-close {
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 1.8rem;
+  color: whitesmoke;
+  margin-left: 25px;
+  text-decoration: none;
+  font-family: sans-serif;
+  user-select: none;
+  z-index: 100;
+}
+
+.dropAct:hover .drop-close {
+  display: flex;
+}
+.nav-close:hover .drop-close {
+  display: flex;
+}
+
+.drop-close {
+  display: none;
+  position: relative;
+  transform: translate(-50px, 0px);
+  margin-top: 5x;
+  background-color: rgba(0, 0, 0, 0.897);
+  border-top: 2px solid rgba(245, 245, 245, 0.884);
+  height: 310px;
+  width: 250px;
+}
+
+.NavCloseDrop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.NavCloseDrop a{
+  font-family: Helvetica;
+  font-size: 15px;
+  color: #ffffff98;
+  text-decoration: none;
+}
+
+.NavCloseDrop li:hover {
+  background-color: #1f1e1e8c;
+}
+
+.NavCloseDrop li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 45px;
+  width: 100%;
+  
+}
+
+.menu-container {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  right: 4%;
+  top: 0;
+  z-index: 100;
+}
+
+#active-perfil {
+  cursor: pointer;
+}
+
+.search-btn {
+  cursor: pointer;
+  font-size: 28px;
+  color: #fff;
+  margin: 0px 10px;
+}
+
+.bel-btn {
+  cursor: pointer;
+  font-size: 28px;
+  color: #fff;
+  margin: 0px 10px;
+}
+
+.menu-drop {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.menu-drop img {
+  height: 32px;
+  margin-right: 5px;
+  border-radius: 15%;
+}
+
+.drop-container {
+  display: none;
+  position: absolute;
+  margin: 400px 0px 0px 0px;
+  right: 5%;
+  height: 400px;
+  width: 220px;
+}
+
+.drop-menu {
+  display: none;
+  border-radius: 1%;
+  flex-direction: column;
+  position: absolute;
+  padding: 15px 10px;
+  margin: 30px 0px 0px 0px;
+  height: 400px;
+  width: 220px;
+  background-color: rgba(0,0,0,.9);
+  border: 1px solid hsla(0,0%,100%,.15);
+  z-index: 10;
+}
+
+.menu-drop:hover .drop-menu {
+  display: flex;
+}
+.menu-drop:hover .drop-container {
+  display: flex;
+}
+
+.menu-perfil {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.menu-perfil:hover {
+  text-decoration: underline;
+}
+
+.btn-second {
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: none;
+  color: #ffffffce;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+}
+
+.btn-second:hover {
+  text-decoration: underline;
+}
+
+.button-exit {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.button-exit a:hover {
+  text-decoration: underline;
+}
+
+#hr-menu {
+  border-top: 1px solid rgba(255, 255, 255, 0.363);
+}
+
+
+.button-exit a{
+  text-decoration: none;
+  color: #ffffffce;
+}
+
+.menus-icon {
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+.second-drop-menu {
+  display: flex;
+  flex-direction: column;
+  bottom: 1;
+}
+
+.menu-perfil span {
+  margin-left: 10px;
+}
+
+#drop-icon {
+  margin-left: 2px;
+  color: #fff;
+}
+
+#main-logo {
+  margin-top: 10px;
+  width: 5vw;
+  max-width: 60px;
+}
