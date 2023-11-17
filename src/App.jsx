@@ -5,11 +5,15 @@ import './App.css'
 
 function App() {
   return (
-    <div className='container'> 
+    <div className='container'>
       <Header />
       <Display />
-      <Carrosel title={'Populares'}/>
-      <Carrosel title={'CLT'}/>
+      
+      <div className='video-area'>
+        <Carrosel title={'Populares'} />
+        <Carrosel title={'CLT'} />
+      </div>
+
     </div>
   )
 }

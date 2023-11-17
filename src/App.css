@@ -59,5 +59,15 @@ body {
   display: none;
 }
 
+.video-area {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+  transform: translate(0px, -120px);
+  z-index: 10;
+}
 
 
