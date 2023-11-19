@@ -6,59 +6,6 @@ body {
   background-color: #141414;
 }
 
-@media screen and (min-width:  600px) and (max-width: 900px) {
-  .video-menu {
-    transform: translate(20px, 100px);
-    scale: 1.3;
-  }
-}
-@media screen and (min-width:  900px) and (max-width: 1500px) {
-  .video-menu {
-    transform: translate(20px, 100px);
-    scale: 1;
-  }
-}
-@media screen and (min-width:  1700px) and (max-width: 1900px) {
-  .video-menu {
-    transform: translate(0px, -40px);
-    scale: 0.9;
-  }
-}
-@media screen and (min-width:  1900px) and (max-width: 2000px) {
-  .video-menu {
-    scale: 0.8;
-    transform: translate(0px, -40px);
-  }
-}
-@media screen and (min-width:  2000px) and (max-width: 2200px) {
-  .video-menu {
-    scale: 0.8;
-    transform: translate(0px, -180px);
-  }
-}
-@media screen and (min-width:  2180px) and (max-width: 2300px) {
-  .video-menu {
-    scale: 0.8;
-    transform: translate(0px, -280px);
-  }
-}
-@media screen and (min-width:  2300px) and (max-width: 2500px) {
-  .video-menu {
-    scale: 0.7;
-    transform: translate(0px, -280px);
-  }
-}
-@media screen and (min-width:  2400px) and (max-width: 2600px) {
-  .video-menu {
-    scale: 0.6;
-    transform: translate(-150px, -450px);
-  }
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
 .video-area {
   display: flex;
   position: absolute;
@@ -66,8 +13,187 @@ body {
   justify-content: center;
   width: 100vw;
   height: auto;
-  transform: translate(0px, -120px);
+  transform: translate(0px, -150px);
   z-index: 10;
+}
+
+
+@media screen and (min-width:  300px) and (max-width: 600px) {
+  .video-menu {
+    transform: translate(12px, 120px);
+    scale: 1.4;
+    height: 26%;
+  }
+
+  .video-area {
+    transform: translate(0px, -100px);
+  }
+
+  #info-btn-icon {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  .player-info {
+    scale: 0.6;
+    
+  }
+}
+
+@media screen and (min-width:  600px) and (max-width: 800px) {
+  .video-menu {
+    transform: translate(25px, 100px);
+    scale: 1.4;
+    height: 23%;
+  }
+
+  .video-area {
+    transform: translate(0px, -100px);
+  }
+
+  #info-btn-icon {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  .player-info {
+    scale: 0.7;
+    
+  }
+}
+
+@media screen and (min-width:  800px) and (max-width: 900px) {
+  .video-menu {
+    transform: translate(25px, 100px);
+    scale: 1.3;
+  }
+
+  .video-area {
+    transform: translate(0px, -100px);
+  }
+
+  #info-btn-icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .player-info {
+    scale: 0.8;
+    
+  }
+}
+
+
+@media screen and (min-width:  900px) and (max-width: 1250px) {
+  .video-menu {
+    transform: translate(13px, 120px);
+    scale: 1.1;
+  }
+
+  .video-area {
+    transform: translate(0px, -100px);
+  }
+
+  #info-btn-icon {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  .player-info {
+    scale: 0.8;
+    
+  }
+}
+
+@media screen and (min-width:  1250px) and (max-width: 1500px) {
+  .video-menu {
+    transform: translate(10px, 100px);
+    scale: 1;
+  }
+
+  .video-area {
+    transform: translate(0px, -100px);
+  }
+}
+@media screen and (min-width:  1500px) and (max-width: 1900px) {
+  .video-menu {
+    transform: translate(-10px, -40px);
+    scale: 0.9;
+  }
+
+  .video-area {
+    transform: translate(0px, -200px);
+  }
+}
+@media screen and (min-width:  1900px) and (max-width: 2000px) {
+  .video-menu {
+    scale: 0.8;
+    transform: translate(-50px, -40px);
+  }
+
+  .video-area {
+    transform: translate(0px, -230px);
+  }
+}
+@media screen and (min-width:  2000px) and (max-width: 2200px) {
+  .video-menu {
+    scale: 0.8;
+    transform: translate(-50px, -180px);
+  }
+
+  .video-area {
+    transform: translate(0px, -300px);
+  }
+
+  .player-info {
+    scale: 1.1;
+  }
+}
+@media screen and (min-width:  2180px) and (max-width: 2300px) {
+  .video-menu {
+    scale: 0.8;
+    transform: translate(-50px, -280px);
+  }
+
+  .video-area {
+    transform: translate(0px, -370px);
+  }
+
+  .player-info {
+    scale: 1.2;
+  }
+}
+@media screen and (min-width:  2300px) and (max-width: 2500px) {
+  .video-menu {
+    scale: 0.7;
+    transform: translate(-110px, -280px);
+  }
+
+  .video-area {
+    transform: translate(0px, -370px);
+  }
+
+  .player-info {
+    scale: 1.3;
+  }
+}
+@media screen and (min-width:  2500px) and (max-width: 2600px) {
+  .video-menu {
+    scale: 0.6;
+    transform: translate(-200px, -450px);
+  }
+
+  .video-area {
+    transform: translate(0px, -450px);
+  }
+
+  .player-info {
+    scale: 1.4;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 
