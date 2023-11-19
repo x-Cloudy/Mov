@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState, } from 'react';
 import { BiSearch } from 'react-icons/bi'
 import { IoMdArrowDropdown } from "react-icons/io";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import MenuDropDown from './MenuDropDown'
+import mainLogo from './imgs/logo-2icon.png'
 import './Header.css'
 
 
@@ -126,7 +126,7 @@ function Nav() {
 function ImgLogo() {
   return (
     <a href='/'>
-      <img src="src/assets/components/Header/imgs/logo-2icon.png" alt="main-logo" id='main-logo' />
+      <img src={mainLogo} alt="main-logo" id='main-logo' />
     </a>
   )
 }
