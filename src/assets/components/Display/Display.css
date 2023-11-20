@@ -1,7 +1,7 @@
 
 .display-container {
   display: flex;
-  background-color: beige;
+  background-color: rgb(39, 39, 37);
   height: 56vw;
   width: 100vw;
 }

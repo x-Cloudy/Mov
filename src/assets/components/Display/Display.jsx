@@ -1,5 +1,7 @@
 import { BsPlayFill } from 'react-icons/bs'
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import video1 from './video/video1.mp4'
+import video2 from './video/video2.mp4'
 import './Display.css'
 
 export default function Display() {
@@ -20,7 +22,7 @@ export default function Display() {
       {/* Video Recomendado */}
       <video className='iframe' autoPlay muted loop>
         {/*Video de fundo src*/}
-        <source src='src/assets/components/Display/video/video1.mp4' type='video/webm' />
+        <source src={video1} type='video/webm' />
 
       </video>
       <VideoControler />
