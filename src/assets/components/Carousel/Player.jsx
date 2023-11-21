@@ -3,6 +3,8 @@ import video1 from './cImgs/video1.png'
 import { MdPlayCircleFilled } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
 import { CiCirclePlus } from "react-icons/ci";
+import './Carousel.css'
+import './Player.css'
 
 export default function Player() {
   const [count, setCount] = useState(0)
@@ -49,16 +51,13 @@ export default function Player() {
 
   function Preview() {
     return (
-      <img src={video1} alt="video-1" className='carrosel-player' />
+      <img src={video1} alt="video-1" className="imgs"/>
     )
   }
 
   return (
-    <div onMouseEnter={onPlayerFocus} onMouseLeave={offPlayerFocus}>
-      <div className='player-container'>
-        <Preview />
-        {active && <PlayerInfo />}
+      <div className="container-teste" onMouseEnter={onPlayerFocus} onMouseLeave={offPlayerFocus}>
+      {active && <PlayerInfo /> || <Preview />} 
       </div>
-    </div>
   )
 }

@@ -1,0 +1,118 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --slider-padding: 5rem;
+  --slider-index: 0;
+  --left-button: 0;
+}
+
+.container-carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-carousel {
+  --items-per-screem: 5;
+  display: flex;  
+  width:  calc(100% - 2 * var(--slider-padding));
+  margin: 0 .25rem;
+  transition: transform .7s ease;
+}
+
+.container-teste {
+  flex: 0 0 calc(100% / var(--items-per-screem));
+  max-width: calc(100% / var(--items-per-screem));
+  aspect-ratio: 16 / 9;
+  padding: .25rem;
+  border-radius: 1rem;
+}
+
+.slider-carousel .imgs {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: .25rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+
+/* .slider-carousel > img {
+  flex: 0 0 calc(100% / var(--items-per-screem));
+  max-width: calc(100% / var(--items-per-screem));
+  aspect-ratio: 16 / 9;
+  padding: .25rem;
+  border-radius: 1rem;
+} */
+
+
+.handle {
+  border: none;
+  border-radius: .1rem;
+  width: var(--slider-padding);
+  background-color: rgba(0, 0, 0, .25);
+  z-index: 10;
+  margin: .25rem 0;
+  padding: 0 .5rem;
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-color 150ms ease-in-out;
+}
+
+.left-handle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  opacity: var(--left-button);
+  
+}
+
+.right-handle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.handle:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.text {
+  transition: transform 150ms ease-in-out;
+}
+
+.handle:hover .text{
+  transform: scale(1.2);
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.title-header > h1 {
+  color: white;
+  margin: 10px 4%;
+  font-family: Helvetica;
+}
+
+.progress-bar {
+  display: flex;
+  min-width: 8rem;
+  gap: .3rem;
+}
+
+.progress-item {
+  flex: 0 0 1rem;
+  min-width: 1rem;
+  height: .2rem;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.progress-item.active {
+  background-color: rgba(255, 255, 255, .9);
+}

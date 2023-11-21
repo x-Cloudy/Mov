@@ -10,7 +10,7 @@ export default function Display() {
     return (
       <div className='video-menu'>
         <button onClick={() => {
-          console.log('foi btn')
+          
         }} className='btn-play'><BsPlayFill id='btn-play-icon' />Assistir</button>
         <button className='btn-info'><AiOutlineInfoCircle id='info-btn-icon'/>Mais Informações</button>
       </div>

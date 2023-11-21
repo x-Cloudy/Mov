@@ -1,6 +1,6 @@
 import Header from './assets/components/Header/Header.jsx'
 import Display from './assets/components/Display/Display.jsx'
-import Carrosel from './assets/components/Carrosel/Carrosel.jsx'
+import Carousel from './assets/components/Carousel/Carousel.jsx'
 import './App.css'
 
 function App() {
@@ -10,8 +10,7 @@ function App() {
       <Display />
       
       <div className='video-area'>
-        <Carrosel title={'Populares'} />
-        <Carrosel title={'CLT'} />
+        <Carousel />
       </div>
 
     </div>
