@@ -51,10 +51,46 @@ export default function Header() {
 
 
 function Menu() {
+  const searchInput = useRef()
+  const [search, setSearch] = useState(false)
+  let cnSearch;
+
+
+  useEffect(() => {
+    window.addEventListener('click', handleChange)
+
+    return () => {
+      window.removeEventListener('click', handleChange)
+    }
+  })
+
+  function handleChange(e) {
+    if (e.target.className.baseVal === 'search-btn'      || 
+        e.target.className === 'search-container'        || 
+        e.target.className === 'search-container active' || 
+        e.target.id === 'input-search') {
+      setSearch(prev => true)
+    } else {
+      setSearch(prev => false)
+    }
+  }
+
+  if (search) {
+    cnSearch = "search-container active"
+    setTimeout(() => {
+      searchInput.current.focus()
+    }, 800);
+  } else {
+    cnSearch = "search-container"
+  }
+
 
   return (
     <div className='menu-container'>
-      <BiSearch className='search-btn' />
+      <button className={cnSearch}>
+        <BiSearch className='search-btn' />
+        <input type='text' placeholder='Titulos' id="input-search" ref={searchInput} />
+      </button>
       <IoMdNotificationsOutline className='bel-btn' />
       <MenuDropDown />
     </div>
@@ -104,7 +140,7 @@ function Nav() {
       <li>
         <a href="/">Inicio</a>
       </li>
-      <li>
+      {/* <li>
         <a href="/">Séries</a>
       </li>
       <li>
@@ -112,12 +148,24 @@ function Nav() {
       </li>
       <li>
         <a href="/">Bombando</a>
-      </li>
+      </li> */}
       <li>
         <a href="/">Minha lista</a>
       </li>
-      <li>
-        <a href="/">Navegar por idiomas</a>
+      <li className='idiomas-nav'>
+        <a href="/">Navegar por idiomas <IoMdArrowDropdown /></a>
+        <div className='idiomas-container'>
+          <div className='idiomas-drop'>
+            <ul>
+              <li>Engles</li>
+              <li>Frances</li>
+              <li>Alemão</li>
+              <li>Ebraico</li>
+              <li>Árabe</li>
+            </ul>
+          </div>
+        </div>
+
       </li>
     </ul>
   )
