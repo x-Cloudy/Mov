@@ -23,7 +23,7 @@ function Loading() {
         <div className='loading-anim'>
         </div>
         <div className='loading-circle'>
-          <img src="src/assets/components/Header/imgs/logo-2icon.png" alt="" />
+          <img src={img} alt="" />
         </div>
       </div>
     </>
