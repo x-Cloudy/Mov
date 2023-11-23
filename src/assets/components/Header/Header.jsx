@@ -68,7 +68,8 @@ function Menu() {
     if (e.target.className.baseVal === 'search-btn'      || 
         e.target.className === 'search-container'        || 
         e.target.className === 'search-container active' || 
-        e.target.id === 'input-search') {
+        e.target.id === 'input-search'                   ||
+        e.target.matches('path')) {
       setSearch(prev => true)
     } else {
       setSearch(prev => false)

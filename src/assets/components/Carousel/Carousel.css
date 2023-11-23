@@ -6,6 +6,7 @@
   --slider-padding: 5rem;
   --slider-index: 0;
   --left-button: 0;
+  --right-button: 1;
 }
 
 .container-carousel {
@@ -18,7 +19,7 @@
   display: flex;  
   width:  calc(100% - 2 * var(--slider-padding));
   margin: 0 .25rem;
-  transition: transform .7s ease;
+  transition: transform .7s ease;  
 }
 
 .container-teste {
@@ -44,15 +45,17 @@
   aspect-ratio: 16 / 9;
   padding: .25rem;
   border-radius: 1rem;
+  position: relative;
+  z-index: 10;
 } */
 
 
 .handle {
+  display: flex;
   border: none;
   border-radius: .1rem;
   width: var(--slider-padding);
   background-color: rgba(0, 0, 0, .25);
-  z-index: 10;
   margin: .25rem 0;
   padding: 0 .5rem;
   cursor: pointer;
@@ -62,13 +65,15 @@
   justify-content: center;
   color: white;
   transition: background-color 150ms ease-in-out;
+  position: relative;
+  opacity: var(--right-button) !important;
+  z-index: 10;
 }
 
 .left-handle {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   opacity: var(--left-button);
-  
 }
 
 .right-handle {
@@ -100,6 +105,8 @@
   font-family: Helvetica;
 }
 
+
+/* 
 .progress-bar {
   display: flex;
   min-width: 8rem;
@@ -115,4 +122,4 @@
 
 .progress-item.active {
   background-color: rgba(255, 255, 255, .9);
-}
+} */

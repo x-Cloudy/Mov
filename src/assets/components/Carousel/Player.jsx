@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import video1 from './cImgs/video1.png'
 import { MdPlayCircleFilled } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
@@ -10,6 +10,18 @@ export default function Player() {
   const [count, setCount] = useState(0)
   const [active, setActive] = useState(false)
 
+
+  //turn off handler if info is on
+  useEffect(() => {
+    const root = document.documentElement;
+    if (active) {
+      console.log('trigger')
+      root.style.setProperty("--right-button", 0)
+    } else {
+      root.style.setProperty("--right-button", 1)
+    }
+  })
+
   function onPlayerFocus() {
     setTimeout(() => {
       while (count < 10) {
@@ -19,6 +31,7 @@ export default function Player() {
     }, 100)
     if (count > 5) {
       setActive(true)
+      
     }
   }
 

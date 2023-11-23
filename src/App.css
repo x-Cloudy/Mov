@@ -17,6 +17,37 @@ body {
   z-index: 10;
 }
 
+.loading-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  scale: 1;
+}
+
+.loading-anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21rem;
+  height: 21rem;
+  background-image: linear-gradient(180deg, #E1A633 0%, #FBE6BE 100%);;
+  border-radius: 50%;
+}
+
+.loading-circle {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
 
 @media screen and (min-width:  300px) and (max-width: 600px) {
   .video-menu {

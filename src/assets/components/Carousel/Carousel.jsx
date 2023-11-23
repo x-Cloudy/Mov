@@ -1,10 +1,11 @@
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import video1 from './cImgs/video1.png'
 import Player from './Player';
 import './Carousel.css'
 
 export default function Carousel() {
+  const leftButtonRef = useRef()
   const [state, setState] = useState(0)
   const [lenght, setLength] = useState(0)
   const [screem, setScreem] = useState(0)
@@ -46,15 +47,16 @@ export default function Carousel() {
     }
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let sliderSize = sliderCarousel.current.children.length;
     let itemsOnScreem = parseInt(getComputedStyle(sliderCarousel.current).getPropertyValue("--items-per-screem"))
     setLength(prev => sliderSize)
     setScreem(prev => itemsOnScreem)
   })
 
+ 
   return (
-    <>
+    <div className='roote'>
       <div className='title-header'>
         <h1 className='title'>Title</h1>
         {/* <div className="progress-bar">
@@ -74,26 +76,25 @@ export default function Carousel() {
 
 
         <div className="slider-carousel" style={styles[0]} ref={sliderCarousel}>
-        <Player />
-        <Player />
-        <Player />
-        <Player />
-        <Player />
-        <Player />
-        <Player />
-        <Player />
-        <Player />
-        <Player />
-        
-
+          <Player />
+          <Player />
+          <Player />
+          <Player />
+          <Player />
+          <Player />
+          <Player />
+          <Player />
+          <Player />
+          <Player />
         </div>
+
         <button className="handle right-handle" onClick={handleSlider}>
           <div className="text">
             &#8250;
           </div>
         </button>
       </div>
-    </>
+    </div>
 
   )
 }
