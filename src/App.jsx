@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import Header from './assets/components/Header/Header.jsx'
 import Display from './assets/components/Display/Display.jsx'
 import Carousel from './assets/components/Carousel/Carousel.jsx'
+import img from './assets/components/Header/imgs/logo-2icon.png'
 import './App.css'
 
 function Loading() {
@@ -32,7 +33,6 @@ function Loading() {
 
 function App() {
   const [state, setState] = useState(false)
-
   useEffect(() => {
     window.addEventListener("load", delay)
   })
@@ -42,8 +42,6 @@ function App() {
       setState(true)
     }, 2000)
   }
-
-
 
   return (
     <>
@@ -55,9 +53,7 @@ function App() {
           <Carousel />
         </div>
       </div> || <Loading />}
-
     </>
-
   )
 }
 

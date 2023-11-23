@@ -158,10 +158,10 @@ function Nav() {
         <div className='idiomas-container'>
           <div className='idiomas-drop'>
             <ul>
-              <li>Engles</li>
-              <li>Frances</li>
+              <li>Inglês</li>
+              <li>Francês</li>
               <li>Alemão</li>
-              <li>Ebraico</li>
+              <li>Hebraico</li>
               <li>Árabe</li>
             </ul>
           </div>
