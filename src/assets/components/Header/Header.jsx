@@ -141,15 +141,6 @@ function Nav() {
       <li>
         <a href="/">Inicio</a>
       </li>
-      {/* <li>
-        <a href="/">Séries</a>
-      </li>
-      <li>
-        <a href="/">Filmes</a>
-      </li>
-      <li>
-        <a href="/">Bombando</a>
-      </li> */}
       <li>
         <a href="/">Minha lista</a>
       </li>
@@ -158,11 +149,11 @@ function Nav() {
         <div className='idiomas-container'>
           <div className='idiomas-drop'>
             <ul>
-              <li>Inglês</li>
-              <li>Francês</li>
-              <li>Alemão</li>
-              <li>Hebraico</li>
-              <li>Árabe</li>
+              <li>English</li>
+              <li>Français</li>
+              <li>Deutsch</li>
+              <li id='hebraico'>עִברִית</li>
+              <li id='arabe'>عربي</li>
             </ul>
           </div>
         </div>

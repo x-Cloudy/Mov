@@ -1,28 +1,47 @@
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
-import video1 from './cImgs/video1.png'
 import Player from './Player';
+import { row1 } from './RowData/row1-data';
 import './Carousel.css'
 
 export default function Carousel() {
-  const leftButtonRef = useRef()
+
+  return (
+    <>
+      <Row d={row1} title={'row1'}/>
+      <Row d={row1} title={'row2'}/>
+    </>
+  )
+}
+
+
+function Row({ d, title }) {
   const [state, setState] = useState(0)
   const [lenght, setLength] = useState(0)
   const [screem, setScreem] = useState(0)
-
   const sliderCarousel = useRef(null)
   let cursorValue;
-  state > 0 ? cursorValue = 'pointer' : cursorValue = 'default';
   const styles = [
     {
       transform: `translateX(calc(${state} * -100%))`
     },
     {
-      opacity: state,
+      visibility: state,
       cursor: cursorValue
     }
   ]
 
+  state > 0 ? cursorValue = 'pointer' : cursorValue = 'default';
+
+  // coleta o tamanho e a quantidade de item
+  useEffect(() => {
+    let sliderSize = sliderCarousel.current.children.length;
+    let itemsOnScreem = parseInt(getComputedStyle(sliderCarousel.current).getPropertyValue("--items-per-screem"))
+    setLength(prev => sliderSize)
+    setScreem(prev => itemsOnScreem)
+  })
+
+  // Active roll button on callback
   function handleSlider(e) {
     let handle;
     if (e.target.matches(".handle")) {
@@ -33,6 +52,7 @@ export default function Carousel() {
     if (handle != null) onHandleClick(handle)
   }
 
+  // handleSlider callback, verifica o tamanho e rolagem
   function onHandleClick(handle) {
     if (handle.classList.contains("left-handle")) {
       if (state < 1) return
@@ -47,54 +67,38 @@ export default function Carousel() {
     }
   }
 
-  useEffect(() => {
-    let sliderSize = sliderCarousel.current.children.length;
-    let itemsOnScreem = parseInt(getComputedStyle(sliderCarousel.current).getPropertyValue("--items-per-screem"))
-    setLength(prev => sliderSize)
-    setScreem(prev => itemsOnScreem)
+  const rowRender = d.map(item => {
+    return (
+      <Player embed={item.url} key={item.id} prev={item.preview} />
+    )
   })
 
- 
   return (
-    <div className='roote'>
+    <div className='container-row'>
       <div className='title-header'>
-        <h1 className='title'>Title</h1>
-        {/* <div className="progress-bar">
-          <div className='progress-item'></div>
-          <div className='progress-item active'></div>
-          <div className='progress-item'></div>
-          <div className='progress-item'></div>
-        </div> */}
+        <h1 className='title'>{title}</h1>
       </div>
 
       <div className='container-carousel'>
-        {<button className="handle left-handle" onClick={handleSlider} style={styles[1]}>
-          <div className="text">
-            &#8249;
-          </div>
-        </button>}
 
+        {/* Button Left Carousel */}
+        <button className="handle left-handle"
+          onClick={handleSlider} style={styles[1]}>
+          <div className="text"> &#8249;</div>
+        </button>
 
         <div className="slider-carousel" style={styles[0]} ref={sliderCarousel}>
-          <Player />
-          <Player />
-          <Player />
-          <Player />
-          <Player />
-          <Player />
-          <Player />
-          <Player />
-          <Player />
-          <Player />
+          {rowRender}
         </div>
 
+        {/* Button Right Carousel */}
         <button className="handle right-handle" onClick={handleSlider}>
-          <div className="text">
-            &#8250;
-          </div>
+          <div className="text"> &#8250;</div>
         </button>
+
       </div>
     </div>
-
   )
 }
+
+

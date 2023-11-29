@@ -105,6 +105,10 @@
   font-family: Helvetica;
 }
 
+.container-row {
+  margin-bottom: 3%;
+}
+
 
 /* 
 .progress-bar {

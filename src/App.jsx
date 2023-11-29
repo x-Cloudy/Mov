@@ -38,14 +38,14 @@ function App() {
   })
 
   function delay() {
-    setTimeout(() => {
-      setState(true)
-    }, 2000)
+    // setTimeout(() => {
+    //   setState(true)
+    // }, 2000)
   }
 
   return (
     <>
-      {state && <div className='container'>
+      {!state && <div className='container'>
         <Header />
         <Display />
 

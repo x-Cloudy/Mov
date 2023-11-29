@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 
+import { InfoProvider } from './assets/context/InfoContext.jsx'
+
 const router = createBrowserRouter([
   {
     path: '/Mov',
@@ -13,6 +15,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <InfoProvider>
+      <RouterProvider router={router} />
+    </InfoProvider>
   </React.StrictMode>,
 )
