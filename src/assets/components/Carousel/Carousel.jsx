@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
-import Player from './Player';
 import { row1 } from './RowData/row1-data';
+import Player from './Player';
 import './Carousel.css'
 
 export default function Carousel() {
