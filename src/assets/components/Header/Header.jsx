@@ -69,7 +69,7 @@ function Menu() {
         e.target.className === 'search-container'        || 
         e.target.className === 'search-container active' || 
         e.target.id === 'input-search'                   ||
-        e.target.matches('path')) {
+        e.target.parentElement.className.baseVal === 'search-btn') {
       setSearch(prev => true)
     } else {
       setSearch(prev => false)
