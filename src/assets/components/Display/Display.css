@@ -7,7 +7,6 @@
 }
 
 .iframe {
-
   position: absolute;
   width: 100vw;
   z-index: 1;
@@ -60,6 +59,7 @@
   font-weight: bolder;
   word-break: break-word;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 #btn-play-icon {

@@ -53,7 +53,7 @@
 .handle {
   display: flex;
   border: none;
-  border-radius: .1rem;
+  border-radius: .5rem;
   width: var(--slider-padding);
   background-color: rgba(0, 0, 0, .25);
   margin: .25rem 0;

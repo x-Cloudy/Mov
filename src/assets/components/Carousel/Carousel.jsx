@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
-import { row1 } from './RowData/row1-data';
+import { row1 } from '../RowData/row1-data';
 import Player from './Player';
 import './Carousel.css'
 
 export default function Carousel() {
-
   return (
     <>
-      <Row d={row1} title={'row1'}/>
+      <Row d={row1} title={'Populares'}/>
       <Row d={row1} title={'row2'}/>
     </>
   )
@@ -69,7 +68,7 @@ function Row({ d, title }) {
 
   const rowRender = d.map(item => {
     return (
-      <Player embed={item.url} key={item.id} prev={item.preview} />
+      <Player embed={item.url} key={item.id} prev={item.preview} id={item.id}/>
     )
   })
 

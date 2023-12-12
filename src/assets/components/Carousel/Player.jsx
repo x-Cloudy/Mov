@@ -5,10 +5,12 @@ import { AiOutlineLike } from "react-icons/ai";
 import { CiCirclePlus } from "react-icons/ci";
 import './Carousel.css'
 import './Player.css'
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
-export default function Player({embed, prev}) {
+export default function Player({ embed, prev, id }) {
   const [count, setCount] = useState(0)
   const [active, setActive] = useState(false)
+  const navigate = useNavigate()
 
   // turn off handler if info is on
   useEffect(() => {
@@ -23,13 +25,13 @@ export default function Player({embed, prev}) {
   function onPlayerFocus() {
     setTimeout(() => {
       while (count < 10) {
+        console.log(count)
         setCount(prev => prev + 1)
         break
       }
-    }, 100)
+    }, 200)
     if (count > 5) {
       setActive(true)
-
     }
   }
 
@@ -39,16 +41,20 @@ export default function Player({embed, prev}) {
   }
 
   function PlayerInfo() {
+
     return (
       <div className='player-info'>
         {/* <img src={video1} /> */}
-        
-        <iframe className="info-player" src={`https://www.youtube.com/embed/${embed}?autoplay=1;si=28ZnN1oGQOSHgWnv&amp;controls=0;`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
-        
+
+        <iframe className="info-player" src={`https://www.youtube.com/embed/${embed}?autoplay=1&mute=1;si=28ZnN1oGQOSHgWnv&amp;controls=0;`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+
         <div className='player-info-control'>
-          <button>
-            <MdPlayCircleFilled id='player-info-btn-icon-play' />
-          </button>
+          <Link to={`/Mov/video/${id}`}>
+            <button>
+              <MdPlayCircleFilled id='player-info-btn-icon-play' />
+            </button>
+          </Link>
+
           <button>
             <CiCirclePlus id='player-info-btn-icon-plus' />
           </button>
@@ -65,7 +71,9 @@ export default function Player({embed, prev}) {
 
   function Preview() {
     return (
-      <img src={prev} alt="video-1" className="imgs" />
+      <Link to={`/Mov/Video/${id}`}>
+        <img src={prev} alt="video-1" className="imgs"/>
+      </Link>
     )
   }
 
