@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import gsap from 'gsap'
 import Header from './assets/components/Header/Header.jsx'
-import Display from './assets/components/Display/Display.jsx'
-import Carousel from './assets/components/Carousel/Carousel.jsx'
+import MainContent from './assets/components/MainContent/MainContent.jsx'
 import img from './assets/components/Header/imgs/logo-2icon.png'
 import './App.css'
+import { Outlet } from 'react-router-dom'
 
 function Loading() {
 
@@ -46,11 +46,8 @@ function App() {
     <>
       {!state && <div className='container'>
         <Header />
-        <Display />
-
-        <div className='video-area'>
-          <Carousel />
-        </div>
+        
+        <Outlet />
       </div> || <Loading />}
     </>
   )

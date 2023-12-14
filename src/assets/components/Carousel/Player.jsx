@@ -5,12 +5,13 @@ import { AiOutlineLike } from "react-icons/ai";
 import { CiCirclePlus } from "react-icons/ci";
 import './Carousel.css'
 import './Player.css'
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Player({ embed, prev, id }) {
   const [count, setCount] = useState(0)
   const [active, setActive] = useState(false)
-  const navigate = useNavigate()
+  const [deb, setDeb] = useState(false)
+  let timeLet;
 
   // turn off handler if info is on
   useEffect(() => {
@@ -23,22 +24,17 @@ export default function Player({ embed, prev, id }) {
   })
 
   function onPlayerFocus() {
-    setTimeout(() => {
-      while (count < 10) {
-        console.log(count)
-        setCount(prev => prev + 1)
-        break
-      }
-    }, 200)
-    if (count > 5) {
+    timeLet = setTimeout(() => {
+      console.log('setTeste')
       setActive(true)
-    }
+    }, 600)
   }
 
   function offPlayerFocus() {
+    clearTimeout(timeLet)
     setActive(prev => prev = false)
-    setCount(prev => prev = 0)
   }
+
 
   function PlayerInfo() {
 
