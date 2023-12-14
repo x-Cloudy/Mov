@@ -1,5 +1,5 @@
 import Display from "../Display/Display"
-import Carousel from "../Carousel/Carousel"
+import { Carousel } from "../Carousel/Carousel"
 
 export default function MainContent() {
   return (

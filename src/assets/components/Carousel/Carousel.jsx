@@ -4,7 +4,7 @@ import { row1 } from '../RowData/row1-data';
 import Player from './Player';
 import './Carousel.css'
 
-export default function Carousel() {
+export function Carousel() {
   return (
     <>
       <Row d={row1} title={'Populares'}/>
@@ -14,7 +14,7 @@ export default function Carousel() {
 }
 
 
-function Row({ d, title }) {
+export function Row({ d, title }) {
   const [state, setState] = useState(0)
   const [lenght, setLength] = useState(0)
   const [screem, setScreem] = useState(0)
@@ -68,7 +68,7 @@ function Row({ d, title }) {
 
   const rowRender = d.map(item => {
     return (
-      <Player embed={item.url} key={item.id} prev={item.preview} id={item.id}/>
+      <Player embed={item.url} key={item.id} prev={item.preview} id={item.id} />
     )
   })
 

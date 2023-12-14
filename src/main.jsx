@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import MainContent from './assets/components/MainContent/MainContent.jsx'
+import Search from './assets/components/Search/Search.jsx'
 import { Video, VideoId } from './assets/components/Video/Video.jsx'
 import './index.css'
 
-import { InfoProvider } from './assets/context/InfoContext.jsx'
+import { WordProvider } from './assets/context/InfoContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'search',
-        element: <p>teste</p>
+        element: <Search />
       }
     ]
   },
@@ -37,8 +38,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <InfoProvider>
+    <WordProvider>
       <RouterProvider router={router} />
-    </InfoProvider>
+    </WordProvider>
   </React.StrictMode>,
 )

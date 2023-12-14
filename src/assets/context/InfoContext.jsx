@@ -1,17 +1,17 @@
 import { createContext, useState } from "react";
 
-export const InfoContext = createContext()
+export const wordContext = createContext()
 
-export function InfoProvider({ children }) {
-  const [isActive, setIsActive] = useState(false)
+export function WordProvider({ children }) {
+  const [words, setWords] = useState('')
 
-  const toggleInfo = () => {
-    setIsActive(!isActive)
+  const toggleWord = (word) => {
+    setWords(word)
   }
 
   return (
-    <InfoContext.Provider value={{ isActive, toggleInfo }}>
+    <wordContext.Provider value={{ words, toggleWord }}>
       {children}
-    </InfoContext.Provider>
+    </wordContext.Provider>
   )
 }

@@ -1,7 +1,9 @@
-import { useEffect, useRef, useState, } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import { BiSearch } from 'react-icons/bi'
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdNotificationsOutline } from 'react-icons/io'
+import { wordContext } from '../../context/InfoContext';
+import { useNavigate } from 'react-router-dom';
 import MenuDropDown from './MenuDropDown'
 import mainLogo from './imgs/logo-2icon.png'
 import './Header.css'
@@ -11,6 +13,8 @@ export default function Header() {
   const rHeader = useRef()
   const [nav, setNav] = useState(false)
   let cName;
+  
+  
   //Pageload
   useEffect(() => {
     if (rHeader.current.offsetWidth < 900) {
@@ -49,11 +53,24 @@ export default function Header() {
 }
 
 
-
 function Menu() {
   const searchInput = useRef()
+  const searchNavigate = useNavigate()
+  const { words, toggleWord } = useContext(wordContext)
   const [search, setSearch] = useState(false)
   let cnSearch;
+  let currentWord;
+
+  function onInputChange(e) {
+    currentWord = e.target.value.toLowerCase()
+  }
+
+  function onEnterPress(e) {
+    if (e.key === 'Enter') {
+      searchNavigate('/Mov/search')
+      toggleWord(currentWord)
+    }
+  }
 
 
   useEffect(() => {
@@ -65,6 +82,11 @@ function Menu() {
   })
 
   function handleChange(e) {
+    if (e.target.nodeName === 'HTML') {
+      setSearch(prev => false)
+      return
+    }
+
     if (e.target.className.baseVal === 'search-btn'      || 
         e.target.className === 'search-container'        || 
         e.target.className === 'search-container active' || 
@@ -74,6 +96,10 @@ function Menu() {
     } else {
       setSearch(prev => false)
     }
+
+    if (e.target.className === null || 
+      e.target.className === ''     || 
+      e.target.className === undefined) return
   }
 
   if (search) {
@@ -90,7 +116,7 @@ function Menu() {
     <div className='menu-container'>
       <button className={cnSearch}>
         <BiSearch className='search-btn' />
-        <input type='text' placeholder='Titulos' id="input-search" ref={searchInput} />
+        <input type='text' placeholder='Titulos' id="input-search" ref={searchInput} onChange={onInputChange} onKeyDown={onEnterPress} />
       </button>
       <IoMdNotificationsOutline className='bel-btn' />
       <MenuDropDown />
