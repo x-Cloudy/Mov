@@ -54,10 +54,8 @@ export default function Player({ embed, prev, id }) {
           <button>
             <CiCirclePlus id='player-info-btn-icon-plus' />
           </button>
-          <button id='button-like'>
-            <AiOutlineLike id='player-info-btn-icon-like' />
-          </button>
         </div>
+        
         <div className='player-info-desc'>
           <p>DRE . MOVBANK . <br /> DEMONSTRATIVO </p>
         </div>

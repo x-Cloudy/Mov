@@ -13,11 +13,11 @@
 }
 
 .iframe-shadow {
-  transform: translate(0px, 5px);
+  transform: translate(0px, 15px);
   display: flex;
   position: absolute;
   align-self: flex-end;
-  height: 200px;
+  height: 220px;
   width: 100vw;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 19.79%, rgba(6, 6, 6, 0.42) 38.54%, rgba(20, 20, 20, 0.96) 89.58%);
   z-index: 2;

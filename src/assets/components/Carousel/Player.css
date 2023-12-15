@@ -2,17 +2,19 @@
   display: flex;
   position: absolute;
   overflow: hidden;
-  transform: translate(-50px, -150px);
   background-color: #202020;
-  width: 350px;
-  height: 400px;
+  bottom: -50%;
+  width: 30rem;
+  height: 35rem;
   border-radius: 3%;
   z-index: 500;
+  justify-content: start;
 }
 
 .player-info-control {
   position: absolute;
-  transform: translate(20px, 220px);
+  margin-left: 5px;
+  top: 52%;
 }
 
 .player-info-control button {
@@ -23,7 +25,7 @@
 #player-info-btn-icon-play {
   cursor: pointer;
   color: #fff;
-  font-size: 50px;
+  font-size: 5rem;
 }
 
 #player-info-btn-icon-play:hover {
@@ -34,25 +36,11 @@
   margin-right: 5px;
   cursor: pointer;
   color: #ffffff98;
-  font-size: 50px;
+  font-size: 5rem;
 }
 
 #player-info-btn-icon-plus:hover {
   color: #ffffffd0;
-}
-
-#player-info-btn-icon-like {
-  cursor: pointer;
-  color: #ffffff98;
-  font-size: 20px;
-}
-
-#button-like {
-  transform: translate(0px, -16px);
-  height: 40px;
-  width: 40px;
-  border: 2px solid rgba(245, 245, 245, 0.671);
-  border-radius: 50%;
 }
 
 #button-like:hover {
@@ -73,17 +61,15 @@
   position: absolute;
   align-items: center;
   align-self: end;
-  transform: translate(-340px, 0px);
-  height: 60px;
-  width: 300px;
-  font-size: 18px;
+  margin: .5rem .5rem;
+  font-size: 1.5rem;
   font-family: Helvetica;
   color: rgba(255, 255, 255, 0.856);
 }
 
 .info-player {
-  margin-top: -3px;
-  width: 100%;
-  height: 200px;
   position: absolute;
+  margin-top: -6px;
+  width: 100%;
+  height: 18rem;
 }

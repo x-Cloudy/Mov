@@ -3,6 +3,7 @@
 }
 
 :root {
+  --items-per-screem: 5;
   --slider-padding: 5rem;
   --slider-index: 0;
   --left-button: 0;
@@ -15,7 +16,6 @@
 }
 
 .slider-carousel {
-  --items-per-screem: 5;
   display: flex;  
   width:  calc(100% - 2 * var(--slider-padding));
   margin: 0 .25rem;
@@ -28,6 +28,9 @@
   aspect-ratio: 16 / 9;
   padding: .25rem;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-carousel .imgs {
@@ -56,7 +59,7 @@
   border-radius: .5rem;
   width: var(--slider-padding);
   background-color: rgba(0, 0, 0, .25);
-  margin: .25rem 0;
+  margin: .55rem 0;
   padding: 0 .5rem;
   cursor: pointer;
   font-size: 5rem;
