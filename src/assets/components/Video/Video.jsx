@@ -1,13 +1,15 @@
 import { Outlet, Link, useParams } from "react-router-dom";
 import { row1, intro } from "../RowData/row1-data";
+import logo from '../Header/imgs/logo-2icon.png';
 import './Video.css'
 
 export function Video() {
   return (
     <div className='video-container'>
-      <Link to={'/Mov'} >
-        <button className="video-button"></button>
+      <Link to={'/Mov'} className="video-button">
+        <img src={logo} className="button-icon-video"/>
       </Link>
+
       <Outlet /> 
     </div>
   )
