@@ -3,7 +3,7 @@ import { BiSearch } from 'react-icons/bi'
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { wordContext } from '../../context/InfoContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MenuDropDown from './MenuDropDown'
 import mainLogo from './imgs/logo-2icon.png'
 import './Header.css'
@@ -165,10 +165,10 @@ function Nav() {
   return (
     <ul className='navbar'>
       <li>
-        <a href="/">Inicio</a>
+        <Link to={'/Mov'}>Inicio</Link>
       </li>
       <li>
-        <a href="/">Minha lista</a>
+        <Link to={'/Mov'}>Minha lista</Link>
       </li>
       <li className='idiomas-nav'>
         <a href="/">Navegar por idiomas <IoMdArrowDropdown /></a>
@@ -191,9 +191,9 @@ function Nav() {
 
 function ImgLogo() {
   return (
-    <a href='/'>
+    <Link to={'/Mov'}>
       <img src={mainLogo} alt="main-logo" id='main-logo' />
-    </a>
+    </Link>
   )
 }
 

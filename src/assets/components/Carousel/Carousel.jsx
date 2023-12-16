@@ -68,7 +68,7 @@ export function Row({ d, title }) {
 
   const rowRender = d.map(item => {
     return (
-      <Player embed={item.url} key={item.id} prev={item.preview} id={item.id} />
+      <Player embed={item.url} key={item.id} prev={item.preview} id={item.id} desc={item.desc} desc2={item.desc2}/>
     )
   })
 

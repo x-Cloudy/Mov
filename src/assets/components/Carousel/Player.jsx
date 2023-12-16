@@ -7,7 +7,7 @@ import './Carousel.css'
 import './Player.css'
 import { Link } from "react-router-dom";
 
-export default function Player({ embed, prev, id }) {
+export default function Player({ embed, prev, id, desc, desc2 }) {
   const [count, setCount] = useState(0)
   const [active, setActive] = useState(false)
   const [deb, setDeb] = useState(false)
@@ -57,7 +57,7 @@ export default function Player({ embed, prev, id }) {
         </div>
         
         <div className='player-info-desc'>
-          <p>DRE . MOVBANK . <br /> DEMONSTRATIVO </p>
+          <p>{desc}<br /> {desc2} </p>
         </div>
       </div>
     )

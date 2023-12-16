@@ -1,4 +1,10 @@
-import video1 from '../Carousel/cImgs/video1.png'
+import cltvsmei from '../Carousel/cImgs/video1.png';
+import cltvspj from '../Carousel/cImgs/cltvspj.jpg';
+import answer from '../Carousel/cImgs/answer.jpg';
+import cnae from '../Carousel/cImgs/cnae.jpg';
+import markup from '../Carousel/cImgs/markupemarkdown.jpg';
+import DRE from '../Carousel/cImgs/DRE.jpg';
+import movcast from '../Carousel/cImgs/movcast.jpg';
 
 export const intro = [
   {
@@ -9,63 +15,82 @@ export const intro = [
 export const row1 = [
   {
     id: 1,
-    preview: video1,
-    url: '5gD_mJo8dB0',
-    title: 'aula 3 markup e markdown teste'
+    preview: cltvspj,
+    url: 'ktJ5FJMjWuM',
+    title: 'aula 3 markup e markdown teste',
+    desc: 'CLT . PJ . ',
+    desc2: 'MOVBANK'
   },
   {
     id: 2,
-    preview: video1,
-    url: 'ktJ5FJMjWuM',
-    title: 'clt vs pj diferenças e vantagens teste'
+    preview: markup,
+    url: '5gD_mJo8dB0',
+    title: 'markup e markdown',
+    desc: 'MARKUP . MARKDOWN . ',
+    desc2: 'MOVBANK'
   },
   {
     id: 3,
-    preview: video1,
-    url: 'kfJIGDZnUpQ',
-    title: 'mov status is the answer for your administation teste'
+    preview: cnae,
+    url: 'bpW10UjkiXs',
+    title: 'cnae',
+    desc: 'CNAE . ',
+    desc2: 'MOVCAST'
   },
   {
     id: 4,
-    preview: video1,
-    url: 'ktJ5FJMjWuM',
-    title: 'juan teste'
+    preview: DRE,
+    url: 'RbYr3781Fjs',
+    title: 'dre',
+    desc: 'DRE . ',
+    desc2: 'MOVBANK'
   },
   {
     id: 5,
-    preview: video1,
-    url: 'kfJIGDZnUpQ',
-    title: 'raquel teste'
-  },
+    preview: cltvsmei,
+    url: 'qvG9jd4tvNg',
+    title: 'clt vs mei',
+    desc: 'CLT . MEI . ',
+    desc2: 'MOVBANK'
+  },  
   {
     id: 6,
-    preview: video1,
-    url: 'kfJIGDZnUpQ',
-    title: 'rato teste'
+    preview: movcast,
+    url: 'Mm_DmoWOG8o',
+    title: 'movcast',
+    desc: '',
+    desc2: 'MOVCAST'
   },
   {
     id: 7,
-    preview: video1,
-    url: 'kfJIGDZnUpQ',
-    title: 'aula teste'
+    preview: cltvspj,
+    url: 'ktJ5FJMjWuM',
+    title: 'clt vs pj diferenças e vantagens teste',
+    desc: 'CLT . PJ . ',
+    desc2: 'MOVBANK'
   },
   {
     id: 8,
-    preview: video1,
-    url: 'kfJIGDZnUpQ',
-    title: 'clt'
+    preview: cnae,
+    url: 'bpW10UjkiXs',
+    title: 'cnae',
+    desc: 'CLT . PJ . ',
+    desc2: 'MOVBANK'
   },
   {
     id: 9,
-    preview: video1,
+    preview: answer,
     url: 'kfJIGDZnUpQ',
-    title: 'marcos'
+    title: 'mov status is the answer for your administation teste',
+    desc: 'CLT . PJ . ',
+    desc2: 'MOVBANK'
   },
   {
     id: 10,
-    preview: video1,
+    preview: cltvsmei,
     url: 'kfJIGDZnUpQ',
-    title: 'felipe'
-  },
-  
+    title: 'raquel teste',
+    desc: 'CLT . PJ . ',
+    desc2: 'MOVBANK'
+  },  
 ];

@@ -49,7 +49,11 @@ body {
 }
 
 
-@media screen and (min-width:  300px) and (max-width: 600px) {
+@media screen and (min-width:  300px) and (max-width: 500px) {
+  :root {
+    --items-per-screem: 2
+  }
+  
   .video-menu {
     transform: translate(12px, 120px);
     scale: 1.4;
@@ -66,7 +70,7 @@ body {
   }
 }
 
-@media screen and (min-width:  600px) and (max-width: 800px) {
+@media screen and (min-width:  500px) and (max-width: 800px) {
   .video-menu {
     transform: translate(25px, 100px);
     scale: 1.4;
