@@ -31,20 +31,9 @@ function Loading() {
 
 
 function App() {
-  const [state, setState] = useState(false)
-  useEffect(() => {
-    window.addEventListener("load", delay)
-  })
-
-  function delay() {
-    // setTimeout(() => {
-    //   setState(true)
-    // }, 2000)
-  }
-
   return (
     <>
-      {!state && <div className='container'>
+      {<div className='container'>
         <Header />
         
         <Outlet />

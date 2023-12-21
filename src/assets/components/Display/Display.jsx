@@ -2,35 +2,49 @@ import { BsPlayFill } from 'react-icons/bs'
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { RxReload } from "react-icons/rx";
 import { Link } from 'react-router-dom';
-import { useRef, useContext, useEffect } from 'react';
-import { wordContext } from '../../context/InfoContext';
+import { useRef, useEffect } from 'react';
 import video1 from './video/videoIntro.mp4'
 import './Display.css'
 
 export default function Display() {
   const myVid = useRef()
-  const { currentPlayer } = useContext(wordContext)
 
-  switch (currentPlayer) {
-    case true:
-      pauseVideo();
-      break
+  {/* Pause Main Display when player-info open */}
+  useEffect(() => {
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.className === 'player-info' ||
+        e.target.className === 'pre-imgs' ||
+        e.target.className === 'info-player' ||
+        e.target.id === 'player-info-btn-icon-play' || 
+        e.target.id === 'player-info-btn-icon-plus' ||
+        e.target.parentNode.id === 'player-info-btn-icon-plus' || 
+        e.target.parentNode.id === 'player-info-btn-icon-play' || 
+        e.target.parentNode.className === 'btn-a' ||
+        e.target.parentNode.className === 'player-info-control' ||
+        e.target.parentNode.className === 'container-test' ||
+        e.target.parentNode.className === 'player-info-desc'
+      ) {
+        pauseVideo();
+      } else {
+        playVideo();
+      }
+    })
 
-    case false:
-      playVideo();
-      break
-  }
+    return () => {
+      document.removeEventListener('mouseover', (e) => {
+        if (e.target.className === 'player-info') {
+          myVid.current.pause();
+        }
+      })
+    }
+  })
 
   function playVideo() {
-    useEffect(() => {
-      myVid.current.play()
-    })
+    myVid.current.play()
   }
 
   function pauseVideo() {
-    useEffect(() => {
-      myVid.current.pause()
-    })
+    myVid.current.pause()
   }
 
   function VideoControler() {

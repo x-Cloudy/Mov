@@ -8,9 +8,8 @@ import './Player.css'
 
 export default function Player({ embed, prev, id, desc, desc2 }) {
   const [active, setActive] = useState(false)
-  const { togglePlayer } = useContext(wordContext)
   let timeLet;
-
+  
   // turn off handler if info is on
   useEffect(() => {
     const root = document.documentElement;
@@ -21,6 +20,7 @@ export default function Player({ embed, prev, id, desc, desc2 }) {
     }
   })
 
+  
   function onPlayerFocus() {
     timeLet = setTimeout(() => {
       setActive(true)
@@ -31,26 +31,18 @@ export default function Player({ embed, prev, id, desc, desc2 }) {
     clearTimeout(timeLet)
     setActive(prev => prev = false)
   }
-
-  function pauseVideo() {
-    togglePlayer(prev => prev = true)
-  }
-
-  function playVideo() {
-    togglePlayer(prev => prev = false)
-  }
-
+ 
   function PlayerInfo() {
 
     return (
       <div className='player-info'>
 
-        <img src={prev} alt={`video${id}`} className="pre-imgs" />
+        <img src={prev} alt={`video${id}`} className="pre-imgs"/>
 
-        <iframe className="info-player" src={`https://www.youtube.com/embed/${embed}?autoplay=1&mute=1;si=28ZnN1oGQOSHgWnv&amp;controls=0;`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+        <iframe className="info-player" src={`https://www.youtube.com/embed/${embed}?autoplay=1&mute=1&rel=0;si=28ZnN1oGQOSHgWnv&amp;controls=0;`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
 
         <div className='player-info-control'>
-          <Link to={`/Mov/video/${id}`}>
+          <Link to={`/Mov/video/${id}`} className="btn-a">
             <button>
               <MdPlayCircleFilled id='player-info-btn-icon-play' />
             </button>
@@ -60,7 +52,7 @@ export default function Player({ embed, prev, id, desc, desc2 }) {
             <CiCirclePlus id='player-info-btn-icon-plus' />
           </button>
         </div>
-
+        
         <div className='player-info-desc'>
           <p>{desc}<br /> {desc2} </p>
         </div>
@@ -71,21 +63,13 @@ export default function Player({ embed, prev, id, desc, desc2 }) {
   function Preview() {
     return (
       <Link to={`/Mov/Video/${id}`}>
-        <img src={prev} alt={`video${id}`} className="imgs" />
+        <img src={prev} alt={`video${id}`} className="imgs"/>
       </Link>
     )
   }
 
   return (
-    <div className="container-teste"
-      onMouseEnter={() => {
-        onPlayerFocus();
-        pauseVideo();
-      }}
-      onMouseLeave={() => {
-        offPlayerFocus();
-        playVideo();
-      }}>
+    <div className="container-teste" onMouseEnter={onPlayerFocus} onMouseLeave={offPlayerFocus}>
       {active && <PlayerInfo /> || <Preview />}
     </div>
   )

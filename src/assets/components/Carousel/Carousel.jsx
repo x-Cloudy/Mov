@@ -6,15 +6,15 @@ import './Carousel.css'
 
 export function Carousel() {
   return (
-    <>
+    <div className='carousel-main-container'>
       <Row d={row1} title={'Populares'}/>
       <Row d={row1} title={'row2'}/>
-    </>
+    </div>
   )
 }
 
 
-export function Row({ d, title }) {
+function Row({ d, title }) {
   const [state, setState] = useState(0)
   const [lenght, setLength] = useState(0)
   const [screem, setScreem] = useState(0)
