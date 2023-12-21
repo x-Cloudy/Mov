@@ -1,14 +1,39 @@
+@keyframes openInfo {
+  from {
+    scale: 0.7;
+  }
+
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes infoOpacity {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
 .player-info {
   display: flex;
   position: absolute;
   overflow: hidden;
   background-color: #202020;
-  bottom: -50%;
-  width: 30rem;
-  height: 35rem;
+  bottom: -40%;
+  width: 35rem;
+  height: 40rem;
   border-radius: 3%;
   z-index: 500;
   justify-content: start;
+  animation-name: openInfo;
+  animation-duration: .4s;
+  animation-timing-function: ease;
 }
 
 .player-info-control {
@@ -71,5 +96,16 @@
   position: absolute;
   margin-top: -6px;
   width: 100%;
-  height: 18rem;
+  height: 20rem;
+}
+
+.pre-imgs {
+  position: absolute;
+  width: 100%;
+  height: 20rem !important;
+  z-index: 100;
+  animation-name: infoOpacity;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }

@@ -3,7 +3,7 @@
 }
 
 :root {
-  --items-per-screem: 5;
+  --items-per-screem: 4;
   --slider-padding: 5rem;
   --slider-index: 0;
   --left-button: 0;
@@ -111,22 +111,3 @@
 .container-row {
   margin-bottom: 3%;
 }
-
-
-/* 
-.progress-bar {
-  display: flex;
-  min-width: 8rem;
-  gap: .3rem;
-}
-
-.progress-item {
-  flex: 0 0 1rem;
-  min-width: 1rem;
-  height: .2rem;
-  background-color: rgba(255, 255, 255, .5);
-}
-
-.progress-item.active {
-  background-color: rgba(255, 255, 255, .9);
-} */

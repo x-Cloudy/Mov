@@ -25,6 +25,6 @@ export function VideoId() {
   }
 
   return (
-    <iframe className="video-player" src={`https://www.youtube.com/embed/${videoAction}?autoplay=1&mute=0;si=X27ge2SJWDsc28jf;`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture; web-share" allowFullScreen='1'></iframe>
+    <iframe className="video-player" src={`https://www.youtube.com/embed/${videoAction}?autoplay=1&mute=0&rel=0;si=X27ge2SJWDsc28jf;`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture; web-share" allowFullScreen='1'></iframe>
   )
 }
