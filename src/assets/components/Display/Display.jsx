@@ -9,33 +9,31 @@ import './Display.css'
 export default function Display() {
   const myVid = useRef()
 
+  function infoInFoco(e) {
+    if (e.target.className === 'player-info' ||
+    e.target.className === 'pre-imgs' ||
+    e.target.className === 'info-player' ||
+    e.target.id === 'player-info-btn-icon-play' || 
+    e.target.id === 'player-info-btn-icon-plus' ||
+    e.target.parentNode.id === 'player-info-btn-icon-plus' || 
+    e.target.parentNode.id === 'player-info-btn-icon-play' || 
+    e.target.parentNode.className === 'btn-a' ||
+    e.target.parentNode.className === 'player-info-control' ||
+    e.target.parentNode.className === 'container-test' ||
+    e.target.parentNode.className === 'player-info-desc'
+  ) {
+    pauseVideo();
+  } else {
+    playVideo();
+  }
+  }
+
   {/* Pause Main Display when player-info open */}
   useEffect(() => {
-    document.addEventListener('mouseover', (e) => {
-      if (e.target.className === 'player-info' ||
-        e.target.className === 'pre-imgs' ||
-        e.target.className === 'info-player' ||
-        e.target.id === 'player-info-btn-icon-play' || 
-        e.target.id === 'player-info-btn-icon-plus' ||
-        e.target.parentNode.id === 'player-info-btn-icon-plus' || 
-        e.target.parentNode.id === 'player-info-btn-icon-play' || 
-        e.target.parentNode.className === 'btn-a' ||
-        e.target.parentNode.className === 'player-info-control' ||
-        e.target.parentNode.className === 'container-test' ||
-        e.target.parentNode.className === 'player-info-desc'
-      ) {
-        pauseVideo();
-      } else {
-        playVideo();
-      }
-    })
+    document.addEventListener('mouseover', infoInFoco)
 
     return () => {
-      document.removeEventListener('mouseover', (e) => {
-        if (e.target.className === 'player-info') {
-          myVid.current.pause();
-        }
-      })
+      document.removeEventListener('mouseover', infoInFoco)
     }
   })
 
