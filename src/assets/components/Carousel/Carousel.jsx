@@ -18,6 +18,7 @@ function Row({ d, title }) {
   const [state, setState] = useState(0)
   const [lenght, setLength] = useState(0)
   const [screem, setScreem] = useState(0)
+  const [mobile, setMobile] = useState(false)
   const sliderCarousel = useRef(null)
   let cursorValue;
   const styles = [
@@ -39,6 +40,15 @@ function Row({ d, title }) {
     setLength(prev => sliderSize)
     setScreem(prev => itemsOnScreem)
   })
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    const winSize = body.getBoundingClientRect().width
+    
+    if (winSize < 500)  {
+      setMobile(true)
+    }
+  }, [])
 
   // Active roll button on callback
   function handleSlider(e) {
@@ -81,7 +91,7 @@ function Row({ d, title }) {
       <div className='container-carousel'>
 
         {/* Button Left Carousel */}
-        <button className="handle left-handle"
+        <button className="handle left-handle" disabled={mobile}
           onClick={handleSlider} style={styles[1]}>
           <div className="text"> &#8249;</div>
         </button>
@@ -91,7 +101,7 @@ function Row({ d, title }) {
         </div>
 
         {/* Button Right Carousel */}
-        <button className="handle right-handle" onClick={handleSlider}>
+        <button className="handle right-handle" onClick={handleSlider} disabled={mobile}>
           <div className="text"> &#8250;</div>
         </button>
 
