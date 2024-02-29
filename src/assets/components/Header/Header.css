@@ -397,4 +397,41 @@
   font-size: 2rem;
 }
 
+@media screen and (max-width: 500px) {
+  #main-logo {
+    margin-left: -25px;
+    width: 9em;
+    min-width: 0px;
+  }
+
+  .nav-close {
+    font-size: 2.8rem;
+    margin-left: 25px;
+  }
+
+  .search-btn {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
+  .bel-btn {
+    font-size: 20px;
+    margin: 0px 0px 0 10px;
+  }
+
+  .drop-close {
+    transform: translate(-10px, -10px);
+    margin-top: 5x;
+    background-color: rgba(0, 0, 0, 0.897);
+    border-top: 2px solid rgba(245, 245, 245, 0.884);
+    height: 40vh;
+    width: 35vw;
+    min-width: 90px;
+  }
+
+  .drop-close a {
+    font-size: 3.5em;
+  }
+}
+
 

@@ -6,4 +6,5 @@
 
 body, html {
   font-size: .75vw;
+  overflow-x: hidden;
 }

@@ -49,24 +49,9 @@ body {
 }
 
 
-@media screen and (min-width:  300px) and (max-width: 500px) {
+@media screen and (min-width:  100px) and (max-width: 500px) {
   :root {
     --items-per-screem: 2
-  }
-  
-  .video-menu {
-    transform: translate(12px, 120px);
-    scale: 1.4;
-    height: 26%;
-  }
-
-  .video-area {
-    transform: translate(0px, -100px);
-  }
-
-  #info-btn-icon {
-    font-size: 15px;
-    margin-right: 5px;
   }
 }
 

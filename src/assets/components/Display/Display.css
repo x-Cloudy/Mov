@@ -82,7 +82,7 @@
   opacity: 1;
   padding: 0.8rem;
   font-family: Helvetica;
-  font-size: 150%;
+  font-size: 180%;
   font-weight: bolder;
   position: relative;
   user-select: none;
@@ -152,4 +152,48 @@
   font-size: 1.8rem;
   font-family: Helvetica;
   font-weight: bold;
+}
+
+@media screen and (min-width:  100px) and (max-width: 500px) {
+  
+  .video-menu {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 70px 0 0px -9px;
+    align-self: center;
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 10;
+  }
+
+  .btn-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    background-color: white;
+    color: black;
+    font-size: 3em;
+    z-index: 20;
+  }
+
+  .btn-info {
+    cursor: pointer;
+    width: 24vw;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 3em;
+    z-index: 19;
+  }
+
+  #info-btn-icon {
+    display: block;
+    opacity: 0;
+    font-size: 200%;
+    margin-left: -30px;
+  }
+
 }
