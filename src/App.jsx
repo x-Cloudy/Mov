@@ -5,6 +5,7 @@ import MainContent from './assets/components/MainContent/MainContent.jsx'
 import img from './assets/components/Header/imgs/logo-2icon.png'
 import './App.css'
 import { Outlet } from 'react-router-dom'
+import Footer from './assets/components/Footer/Footer.jsx'
 
 function Loading() {
 
@@ -29,7 +30,6 @@ function Loading() {
   )
 }
 
-
 function App() {
   return (
     <>
@@ -38,6 +38,7 @@ function App() {
         
         <Outlet />
       </div> || <Loading />}
+      <Footer />
     </>
   )
 }

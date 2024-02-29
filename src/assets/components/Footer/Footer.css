@@ -1,0 +1,10 @@
+.footer-container {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  background-color: red;
+  position: relative;
+  width: 100vw;
+  height: 150px;
+  z-index: 100;
+}

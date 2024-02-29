@@ -155,12 +155,12 @@
 }
 
 @media screen and (min-width:  100px) and (max-width: 500px) {
-  
+
   .video-menu {
     display: flex;
     justify-content: center;
     align-items: end;
-    margin: 70px 0 0px -9px;
+    margin: 40px 0 0px -9px;
     align-self: center;
     position: relative;
     width: auto;
@@ -194,6 +194,37 @@
     opacity: 0;
     font-size: 200%;
     margin-left: -30px;
+  }
+
+  .sound-replay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 43rem;
+    left: 41rem;
+    position: relative;
+    height: 5rem;
+    width: 15rem;
+    scale: 2;
+  }
+
+  .age-tag {
+    width: 20rem;
+  }
+
+  .reload-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 8rem;
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 0rem solid rgba(255, 255, 255, 0.651);
+    font-size: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
   }
 
 }

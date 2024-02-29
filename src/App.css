@@ -8,7 +8,7 @@ body {
 
 .video-area {
   display: flex;
-  position: absolute;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
@@ -57,9 +57,9 @@ body {
 
 @media screen and (min-width:  500px) and (max-width: 800px) {
   .video-menu {
-    transform: translate(25px, 100px);
+    transform: translate(25px, 130px);
     scale: 1.4;
-    height: 23%;
+    height: 26%;
   }
 
   .video-area {
@@ -155,7 +155,7 @@ body {
     transform: translate(0px, -370px);
   }
 }
-@media screen and (min-width:  2300px) and (max-width: 2500px) {
+@media screen and (min-width:  2300px) and (max-width: 2999px) {
   .video-menu {
     scale: 0.7;
     transform: translate(-110px, -280px);
@@ -165,10 +165,10 @@ body {
     transform: translate(0px, -370px);
   }
 }
-@media screen and (min-width:  2500px) and (max-width: 2600px) {
+@media screen and (min-width:  3000px) and (max-width: 3600px) {
   .video-menu {
-    scale: 0.6;
-    transform: translate(-200px, -450px);
+    scale: 0.9;
+    transform: translate(-0px, -550px);
   }
 
   .video-area {
