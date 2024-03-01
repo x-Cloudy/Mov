@@ -7,30 +7,29 @@
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
   .navbar li {
-    scale: 1.2;
-
+    font-size: 1.9rem;
   }
 }
 
-@media screen and (min-width: 1700px) and (max-width: 2600px) {
+@media screen and (min-width: 1700px) and (max-width: 3300px) {
   .navbar li {
-    scale: 0.8;
-    margin-right: -10px;
+    font-size: 1.2rem;
+    margin-right: 10px;
   }
 }
-
 
 .header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: start;
   position: fixed;
   width: 100vw;
   height: 68px;
   background: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
   ;
-  font-size: 1.3rem;
-  padding: 0px 40px;
+  font-size: 1.5rem;
+  padding: 0px 4px;
   z-index: 100;
 }
 
@@ -48,11 +47,10 @@
   z-index: 100;
 }
 
-
-
 .navbar {
-  position: relative;
   display: flex;
+  align-items: center;
+  position: relative;
   list-style: none;
   margin-left: 60px;
   z-index: 100;
@@ -167,6 +165,7 @@
 .search-container #input-search {
   display: none;
   border: none;
+  font-size: 20px;
 }
 
 .search-container.active {
@@ -178,6 +177,7 @@
   height: 4rem;
   width: 29rem;
   transition: width .4s ease;
+  max-height: 56px;
 }
 
 .search-container.active .search-btn {
@@ -193,7 +193,7 @@
   color: white;
   width: 80%;
   height: 100%;
-  
+  font-size: 2rem;
 }
 
 #input-search:focus {
@@ -206,16 +206,16 @@
   position: relative;
   z-index: 10;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 30px;
   color: #fff;
   margin-top: 5px;
 }
 
 .bel-btn {
   cursor: pointer;
-  font-size: 28px;
+  font-size: 30px;
   color: #fff;
-  margin: 0px 10px;
+  margin: 0px 20px 0 20px;
 }
 
 .menu-drop {
@@ -225,7 +225,7 @@
 }
 
 .menu-drop img {
-  height: 32px;
+  height: 40px;
   margin-right: 5px;
   border-radius: 15%;
 }
@@ -332,9 +332,10 @@
 
 #main-logo {
   margin-top: 10px;
+  margin-left: 30px;
   width: 5vw;
   min-width: 30px;
-  max-width: 60px;
+  max-width: 70px;
 }
 
 .idiomas-nav {
@@ -399,7 +400,18 @@
   font-size: 2rem;
 }
 
+@media screen and (max-width: 350px) {
+  .bel-btn {
+    margin: 0px 5px 0 15px !important;
+  }
+
+}
+
 @media screen and (max-width: 500px) {
+  .search-container #input-search {
+    font-size: 15px;
+  }
+  
   #main-logo {
     margin-left: -25px;
     width: 9em;
@@ -412,13 +424,13 @@
   }
 
   .search-btn {
-    font-size: 20px;
+    font-size: 20px !important;
     margin-top: 5px;
   }
   
   .bel-btn {
-    font-size: 20px;
-    margin: 0px 0px 0 10px;
+    font-size: 20px !important; 
+    margin: 0px 20px 0 20px;
   }
 
   .drop-close {
@@ -439,6 +451,7 @@
     display: inline;
     border: none;
     color: white;
+    max-height: 56px;
     width: 100%;
     height: 150%;
     margin-bottom: -5px;
@@ -452,4 +465,43 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .search-container #input-search {
+    font-size: 18px;
+  }
+  
+  .search-btn {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  
+  .bel-btn {
+    font-size: 25px;
+    margin: 0px 20px 0 20px;
+  }
+  
+  .menu-drop img {
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 15%;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  .bel-btn {
+    font-size: 40px;
+    margin: 0px 20px 0 10px;
+  }
+
+  .search-btn {
+    font-size: 40px;
+    margin-top: 5px;
+  }
+
+  .menu-drop img {
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 15%;
+  }
+}
 

@@ -74,7 +74,7 @@ export default function Display() {
   return (
     <div className='display-container'>
       {/* Video Recomendado */}
-      <video className='iframe' autoPlay={true} muted={true} loop={true} ref={myVid}>
+      <video className='iframe' autoPlay muted={true} loop={true} ref={myVid}>
         <source src={video1} type='video/webm' />
       </video>
       <VideoControler />

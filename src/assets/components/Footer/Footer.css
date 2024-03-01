@@ -1,10 +1,140 @@
+.footer-spacing {
+  position: relative;
+  width: 100vw;
+  height: 25vh;
+  background-color: red;
+}
+
+
 .footer-container {
   display: flex;
   position: relative;
-  bottom: 0;
-  background-color: red;
-  position: relative;
+  justify-content: center;
+  background-color: #141414;
   width: 100vw;
-  height: 150px;
+  height: 25vh;
   z-index: 100;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.social-icons-container {
+  display: flex;
+  align-self: start;
+}
+
+.social-icons-container a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+.footer-links {
+  width: 1000px;
+}
+
+.footer-links ul {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 50px 50px 50px;
+  list-style: none;
+}
+
+.footer-links li {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica, Arial;
+  color: grey;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  text-decoration: underline;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  width: 170px;
+  height: 40px;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.footer-content p {
+  display: flex;
+  align-self: start;
+  margin-top: 25px;
+  color: grey;
+  font-family: Helvetica, Arial;
+  font-size: 13px;
+}
+
+.footer-content span {
+  margin-left: 10px;
+}
+
+#dev-name {
+  text-decoration: none;
+  color: grey;
+}
+
+#dev-name:hover {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1040px) {
+  .footer-container {
+    scale: 0.8;
+  }
+}
+@media screen and (max-width: 840px) {
+  .footer-container {
+    scale: 0.7;
+  }
+}
+@media screen and (max-width: 725px) {
+  .footer-container {
+    scale: 0.6;
+  }
+}
+@media screen and (max-width: 620px) {
+  .footer-container {
+    scale: 0.5;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer-container {
+    scale: 0.4;
+  }
+
+
+  .footer-links {
+    width: 850px;
+  }
+
+  .footer-links li {
+
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .footer-links {
+    width: 600px;
+  }
 }

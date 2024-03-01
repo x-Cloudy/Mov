@@ -35,10 +35,10 @@ function App() {
     <>
       {<div className='container'>
         <Header />
-        
+
         <Outlet />
+        <Footer />
       </div> || <Loading />}
-      <Footer />
     </>
   )
 }
