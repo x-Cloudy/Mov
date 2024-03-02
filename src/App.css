@@ -1,7 +1,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: auto;
   background-color: #141414;
 }

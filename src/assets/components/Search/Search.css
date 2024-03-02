@@ -4,7 +4,7 @@
   position: relative;
   justify-content: center;
   width: 100%;
-  height: auto;
+  height: 75vh;
   background-color: #141414;
 }
 
@@ -21,7 +21,7 @@
   margin: 200px 0 300px 0;
 }
 
-.slider-search img{
+.slider-search img {
   display: flex;
   position: relative;  
   border-radius: .5rem;
@@ -30,4 +30,9 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+  .slider-search img {
+    width:  calc(40% - 2 * var(--slider-padding));
+  }
+}
 
